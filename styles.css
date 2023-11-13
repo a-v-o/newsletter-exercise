@@ -1,0 +1,191 @@
+body {
+    background-color: hsl(234, 29%, 20%);
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    font-size: 1.1vw;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+li {
+    font-size: 1vw;
+    margin-top: 5px;
+    list-style-position: inside;
+    list-style-image: url(./assets/images/icon-list.svg);
+}
+
+label {
+    font-size: 1vw;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5%;
+    background-color: white;
+    width: 55%;
+    height: 75vh;
+    margin: auto;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+
+input {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 25px;
+    width: 22vw;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 7px;
+}
+
+.red {
+    background-color: #ff625747;
+    border: 1px solid red;
+}
+
+.red::placeholder {
+    color: red;
+}
+
+input:focus {
+    outline: none;
+    
+}
+
+.submit {
+    width: 23.7vw;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+    background-color: hsl(235, 18%, 26%);
+}
+
+.submit:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+.form-desc {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    padding: 2.5vw;
+    padding-top: 2vw;
+}
+
+.form-img {
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.error {
+    color: red;
+    display: inline;
+    float: right;
+}
+
+.error::after {
+    content: "Valid email required";
+}
+
+.success {
+    width: 25%;
+    text-align: left;
+    visibility: hidden;
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 800px) {
+    body {
+        background-color: white;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    li {
+        list-style-position: outside;
+        margin-left: 25px;
+    }
+
+    label {
+        font-size: 14px;
+        float: none;
+    }
+
+    #email {
+        display: block;
+        min-width: 100%;
+    }
+
+    .submit {
+        width: 105%;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .form-desc {
+        width: 80%;
+        text-align: left;
+        padding: 10%;
+    }
+
+    .form-img {
+        padding: 0;
+        border-radius: 0px;
+        min-width: 100%;
+        min-height: 50vh;
+    }
+
+    .success {
+        width: 60%;
+        padding: 20%;
+        height: 60%;
+        border-radius: 0;
+    }
+
+    #dismiss {
+        margin-top: 20%;
+    }
+}
