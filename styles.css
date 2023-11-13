@@ -67,7 +67,7 @@ input {
 
 input:focus {
     outline: none;
-    
+
 }
 
 .submit {
@@ -122,6 +122,14 @@ input:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.attribution {
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 @media screen and (max-width: 800px) {
     body {
@@ -187,5 +195,14 @@ input:focus {
 
     #dismiss {
         margin-top: 20%;
+    }
+
+    .attribution {
+        position: absolute;
+        width: 100%;
+        bottom: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: black;
     }
 }
