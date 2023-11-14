@@ -63,6 +63,7 @@ input {
 input:focus {
     outline: none;
     box-shadow: 0 0 0 2px hsl(4, 100%, 67%);
+    border: 1px solid hsl(4, 100%, 67%);
 }
 
 .red {
@@ -158,6 +159,7 @@ input:focus {
         margin-left: 25px;
     }
 
+
     label {
         font-size: 14px;
         float: none;
@@ -201,7 +203,7 @@ input:focus {
     .success {
         width: 60vw;
         padding: 20vw;
-        height: 60%;
+        height: 60vw;
         border-radius: 0;
     }
 

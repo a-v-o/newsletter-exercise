@@ -4,17 +4,21 @@ const label = document.getElementById("error-msg")
 const email = document.getElementById("email");
 const success = document.getElementById("success")
 const dismiss = document.getElementById("dismiss")
+const successMessage = document.getElementById("success-msg"); 
+
 
 btn.addEventListener("click", showSuccess)
 dismiss.addEventListener("click", dismissMessage)
 
-
 function showSuccess() {
-    if (email.value == "" || String(email.value).includes("@") == false ) {
+    const user = String(email.value);
+
+    if (user == "" || user.includes("@") == false || user.substring(user.indexOf("@") + 1) == "") {
         displayError(true)
     } else {
         success.style.visibility = "visible"
         container.style.visibility = "hidden"
+        successMessage.innerHTML = "A confirmation email has been sent to " + user + ". Please open it and click the button inside to confirm your subscription."
         displayError(false)
     }
 }
